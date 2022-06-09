@@ -2,28 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Specifying Pipeline') {
             steps {
-                echo 'Start Building'
+                echo 'SCM Loaded'
             }
         }
         stage('Test') {
             steps {
-                echo 'Test App'
-            }
-        }
-        stage('Clean') {
-            steps {
-                echo 'Cleaning Workspace'
+                echo 'Running Interpretor'
             }
         }
         stage('GIT-JENKINSFILE') {
             steps {
                 echo 'Temporary Buffer Loaded'
             }
-        }
-        
-        stage('Build MAVEN JAR'){
+        }        
+        stage('Execute Python File'){
             steps{
                 build 'TestPRJ'
             }
