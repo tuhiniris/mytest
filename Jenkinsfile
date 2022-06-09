@@ -16,8 +16,14 @@ pipeline {
             steps {
                 echo 'Temporary Buffer Loaded'
             }
-        }        
-        stage('Execute Python File'){
+        }
+        stage('Python Execution') {
+            steps {
+                echo 'Temporary Buffer Loaded'
+                build 'PyPRJ'
+            }
+        }
+        stage('Experiment on Code'){
             steps{
                 build 'TestPRJ'
             }
