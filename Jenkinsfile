@@ -17,6 +17,12 @@ pipeline {
                 echo 'Cleaning Workspace'
             }
         }
+        stage('GIT-JENKINSFILE') {
+            steps {
+                echo 'Temporary Buffer Loaded'
+            }
+        }
+        
         stage('Build MAVEN JAR'){
             steps{
                 build 'TestPRJ'
